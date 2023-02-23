@@ -9,24 +9,24 @@ RRT* Connect is an extension of the Rapidly-exploring Random Trees (RRT*) algori
 
 ## Imports
 The code uses the following imports:
-*`numpy`
-*`math`: `hypot`, `sqrt`
-*`random`: `randrange`
-*`opencv`: `cv2`
+* `numpy`
+* `math`: `hypot`, `sqrt`
+* `random`: `randrange`
+* `opencv`: `cv2`
 
 ## Classes
-*`Vertex`: A class representing a node in the tree with attributes for position and parent node.
-*`RRT_star_connect`: A class that implements the RRT* algorithm for path planning between two points in an environment. 
+* `Vertex`: A class representing a node in the tree with attributes for position and parent node.
+* `RRT_star_connect`: A class that implements the RRT* algorithm for path planning between two points in an environment. 
 
 ## Functions
 The code contains the following functions:
-*`dist(p1,p2)`: Computes the Euclidean distance between two points `p1` and `p2`.
-*`__init__(self,env_image)`: Initializes the start and end points, the environment image, and the path list.
-*`start_connect(self,env_image=None)`: Implements the RRT* algorithm and returns the path found.
-*`steer(self,start_pos,end_pos)`: Computes a new point that is closer to the end point than the start point and within a maximum distance from the start point.
-*`collide_line(self,start_pos,end_pos)`: Checks if the line connecting two points collides with any obstacles in the environment.
-*`shorten_path(self)`: Shortens the path found by removing intermediate points that can be skipped without colliding with obstacles.
-*`draw_path(self,env_image)`: Draws the path found on the environment image.
+* `dist(p1,p2)`: Computes the Euclidean distance between two points `p1` and `p2`.
+* `__init__(self,env_image)`: Initializes the start and end points, the environment image, and the path list.
+* `start_connect(self,env_image=None)`: Implements the RRT* algorithm and returns the path found.
+* `steer(self,start_pos,end_pos)`: Computes a new point that is closer to the end point than the start point and within a maximum distance from the start point.
+* `collide_line(self,start_pos,end_pos)`: Checks if the line connecting two points collides with any obstacles in the environment.
+* `shorten_path(self)`: Shortens the path found by removing intermediate points that can be skipped without colliding with obstacles.
+* `draw_path(self,env_image)`: Draws the path found on the environment image.
 
 ## Variables
 The code also defines some global variables for the GUI, click count, maximum distance between two nodes of a tree, and a radius around the end point to be determined as the finishing area.
