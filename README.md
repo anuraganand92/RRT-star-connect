@@ -34,3 +34,7 @@ The code also defines some global variables for the GUI, click count, maximum di
 ## Running the Program
 If `gui` is set to `True` or `1`, then the algorithm will display a GUI window that shows the progress of the algorithm in finding the path. <br>
 Double click to select the desired starting point, then double click at another position to select the ending point. Make sure to choose the two points on the black parts, as the path generates on the black parts with the light colored parts as obstacles.
+
+An example image is shown below:
+
+![example rrt](example.png)
