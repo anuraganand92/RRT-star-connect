@@ -5,10 +5,10 @@ from random import randrange as rand
 import cv2
 
 #Value assignments
-gui = 1
-clickCount = 0
-max_dist = 20
-delta_radius = 10
+gui = 1             #acts as truth value if gui is open
+clickCount = 0      #counts number of clicks for the double click to choose start and end points
+max_dist = 20       #maximum distance between two nodes of a tree
+delta_radius = 10   #radius around the end point to be determined as the finishing area
 
 # Distance b/w two points
 def dist(p1,p2):
@@ -21,7 +21,7 @@ class Vertex:
     self.parent = parent
 
 
-class RRT_connect :
+class RRT_star_connect :
 
 	def __init__(self,env_image):
 		print("Running...")
@@ -222,7 +222,7 @@ if __name__ == '__main__':
 	loaded_env= cv2.cvtColor(env_image,cv2.COLOR_BGR2GRAY)
 	ret,loaded_env = cv2.threshold(loaded_env,175,255,cv2.THRESH_BINARY)
 
-	rrt = RRT_connect(env_image=loaded_env)
+	rrt = RRT_star_connect(env_image=loaded_env)
 	
 	#deciding start and goal point (using double click)
 	if gui:
